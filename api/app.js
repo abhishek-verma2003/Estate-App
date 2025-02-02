@@ -24,7 +24,7 @@ app.use("/api/test",testRoute);
 app.use("/api/chats",chatRoute);
 app.use("/api/messages",messageRoute);
 
-
-app.listen(8800,()=>{
+const port =process.env.PORT ||8800;
+app.listen(port,()=>{
     console.log("Server is running");
 })
