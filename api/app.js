@@ -17,6 +17,10 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+app.use("/",(req,res)=>{
+    res.send("Api working")
+});
+
 app.use("/api/auth",authRoute);
 app.use("/api/users",userRoute);
 app.use("/api/posts",postRoute);
